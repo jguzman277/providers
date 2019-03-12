@@ -1,0 +1,13 @@
+<p>
+  <strong>Provider specialty:</strong>
+  <%= @provider_specialty.provider_specialty %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @provider_specialty.active? ? 'Yes' : 'No' %>
+</p>
+
+<%= link_to 'Edit', edit_provider_specialty_path(@provider_specialty), :class => "btn btn-link" %> |
+<%= link_to 'Back', provider_specialties_path, :class => "btn btn-link" %> |
+<%= link_to 'Delete', provider_specialty_path(@provider_specialty), method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-link" %>

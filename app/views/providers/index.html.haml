@@ -1,0 +1,16 @@
+%h1 Providers
+%div
+    %table{:class => "table table-striped"}
+        %thead{:class => "thead-dark paper"}
+            %tr
+                %th Provider Name
+                %th Specialty
+                %th Date of Hire
+                %th Commission Rate
+        %tbody
+            - @providers.each do |provider|
+                %tr
+                    %td= link_to "#{provider.first_name} #{provider.last_name}", provider
+                    %td= provider.provider_specialty.provider_specialty
+                    %td= provider.Date_Of_Hire.strftime("%m/%d/%Y")
+                    %td= provider.Commission_Rate

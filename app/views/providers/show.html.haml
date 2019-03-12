@@ -1,0 +1,28 @@
+%h1 Provider
+%hr
+
+%p
+    %strong First Name:
+    = @provider.first_name
+
+%p
+    %strong Last Name:
+    = @provider.last_name
+
+%p
+    %strong Specialty:
+    = @provider.provider_specialty.provider_specialty
+
+%p
+    %strong Date of Hire:
+    = @provider.Date_Of_Hire.strftime("%m/%d/%Y")
+
+%p
+    %strong Commission Rate:
+    = @provider.Commission_Rate
+
+= link_to "Edit", edit_provider_path, :class => "btn btn-link" 
+| 
+= link_to "Back", root_path, :class => "btn btn-link" 
+|
+= link_to "Delete", provider_path(@provider), method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-link"

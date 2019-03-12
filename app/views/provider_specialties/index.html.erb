@@ -1,0 +1,23 @@
+<h1>Provider Specialties</h1>
+
+<table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th>Provider specialty</th>
+      <th>Active</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @provider_specialties.each do |provider_specialty| %>
+      <tr>
+        <td><%= link_to provider_specialty.provider_specialty, provider_specialty %></td>
+        <td><%= provider_specialty.active? ? 'Yes':'No' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Add Provider Specialty', new_provider_specialty_path, :class => "btn btn-primary" %>

@@ -1,0 +1,18 @@
+%h1 Provider
+%hr
+%p
+    %strong Name:
+    = "#{@user.first_name} #{@user.last_name}"
+
+%p 
+    %strong E-mail Address: 
+    = @user.email
+
+%p
+    %strong Date of Birth:
+    = @user.dob.strftime("%m/%d/%Y") if @user.dob
+    
+%p
+    %strong Date of Hire:
+    = @user.doh.strftime("%m/%d/%Y") if @user.doh
+

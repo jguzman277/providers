@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Offices</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Office</th>
+      <th>Active</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @offices.each do |office| %>
+      <tr>
+        <td><%= link_to office.Office, office %></td>
+        <td><%= office.Active? ? 'Yes':'No' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Office', new_office_path, :class => "btn btn-link" %>

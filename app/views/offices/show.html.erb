@@ -1,0 +1,12 @@
+<h1>Office</h1>
+<p>
+  <strong>Office:</strong>
+  <%= @office.Office %>
+</p>
+<p>
+  <strong>Active:</strong>
+  <%= @office.Active? ? 'Yes' : 'No' %>
+</p>
+
+<%= link_to 'Edit', edit_office_path(@office), :class => "btn btn-link" %> |
+<%= link_to 'Back', offices_path, :class => "btn btn-link" %>

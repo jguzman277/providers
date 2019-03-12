@@ -1,0 +1,19 @@
+%h1 Providers
+%div
+    %table{:class => "table table-striped"}
+        %thead{:class => "thead-dark paper"}
+            %tr
+                %th E-mail
+                %th First Name
+                %th Last Name
+                %th Date of Birth
+                %th Date of Hire
+        %tbody
+            - @users.each do |user|
+                %tr
+                    %td= link_to user.email, user
+                    %td= user.first_name
+                    %td= user.last_name
+                    %td= user.dob
+                    %td= user.doh
+ 
