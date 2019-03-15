@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+  #devise_for :users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   resources :offices
   resources :provider_specialties
-  devise_for :users
+  devise_for :users#, ActiveAdmin::Devise.config
   resources :users, only: [:index, :show]
+  resources :states
   get 'providers/index'
   
   resources :providers

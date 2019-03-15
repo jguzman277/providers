@@ -1,0 +1,5 @@
+= form_with(model: @state, local: true) do |f|
+    %div{:class => "form-group"}
+        =f.label :state
+        .form-control=f.text_field :state
+        =f.submit

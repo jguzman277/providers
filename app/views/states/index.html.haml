@@ -1,0 +1,11 @@
+%h2 States
+
+%div
+    %table{:class => "table table-striped"}
+        %thead{:class => "thead-dark paper"}
+            %tr
+                %th State
+        %tbody
+            - @states.each do |state|
+                %tr
+                    %td=link_to state.state, state
